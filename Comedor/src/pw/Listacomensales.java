@@ -15,33 +15,30 @@ import javax.servlet.http.*;
 
 
 @SuppressWarnings("serial")
-public class Vermensaje extends HttpServlet {
+public class Listacomensales extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 
 		resp.setContentType("text/html");
-		
+		System.out.println(123);
 	
 		//se utiliza para nicia�
 
-		Query q = pm.newQuery(Mensajes.class);
-		
-		q.setOrdering("id descending");
-		q.setRange(0, 10);
-
+		Query q = pm.newQuery(Persona.class);
+		System.out.println(12);
 		try{
-
+			System.out.println(54);
 			@SuppressWarnings("unchecked")
-			List<Mensajes> mensajes = (List<Mensajes>) q.execute();
-			req.setAttribute("mensajes", mensajes);
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/vermensajes.jsp");
+			List<Persona> comensales = (List<Persona>) q.execute();
+			req.setAttribute("comensales", comensales);
+			RequestDispatcher rd = getServletContext().getRequestDispatcher("/listacomensales.jsp");
 			rd.forward(req, resp);
 
 
 		}catch(Exception e){
-			getServletContext().getRequestDispatcher("/Error.jsp");
+			System.out.println(e);
 
 		}finally{
 			q.closeAll();

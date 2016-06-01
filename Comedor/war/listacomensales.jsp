@@ -4,7 +4,7 @@
 <%@ page import="Clases.*"%>
 <%@ page import="java.util.*;"%>
 <%
-	List<Mensajes> mensajes = (List<Mensajes>) request.getAttribute("mensajes");
+	List<Persona> mensajes = (List<Persona>) request.getAttribute("comensales");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,48 +21,41 @@
 
 	<div id="registro">
 		<div id="table">
-			<h2 align="center">Mensajes</h2>
+			<h2 align="center">Lista Comensales</h2>
 			<%
 				if (mensajes.size() != 0) {
 			%>
 
 			<%
-				for (Mensajes r : mensajes) {
+				for (Persona r : mensajes) {
 			%>
 
 			<div id="contenidos">
-				<div id="columna1">Asunto :</div>
+				<div id="columna1">Nombre :</div>
 				<div id="columna2">
 					<%
-						out.print(r.getAsunto());
+						out.print(r.getNombre());
 					%>
 				</div>
 			</div>
 
 			<div id="contenidos">
-				<div id="columna1">Remitente :</div>
+				<div id="columna1">Apellido :</div>
 				<div id="columna2">
 					<%
-						out.print(r.getRemitente());
+						out.print(r.getApellido());
 					%>
 				</div>
 			</div>
 			<div id="contenidos">
-				<div id="columna1">Contenido :</div>
+				<div id="columna1">CUI :</div>
 				<div id="columna2">
 					<%
-						out.print(r.getCuerpo());
+						out.print(r.getCUI());
 					%>
 				</div>
 			</div>
-			<div id="contenidos">
-				<div id="columna1">Fecha :</div>
-				<div id="columna2">
-					<%
-						out.print(r.getFecha());
-					%>
-				</div>
-			</div>
+			
 			<br>
 
 			<%

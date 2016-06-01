@@ -1,47 +1,96 @@
 @CHARSET "ISO-8859-1";
-*{
-	margin:0;
-	padding:0;
+
+* {
+	margin: 0;
+	padding: 0;
 }
-#registro{
-	width:25%;
-	margin:20px;
-	padding:20px;
-	position:absolute;
-	top:450px;
-	left:600px;
+
+#registro {
+	background: #51401c;
+	opacity: 0.9;
+	width: 400px;
+	border: 5px solid white;
+	margin: 75px auto;
+	padding: 4em;
+	border-radius: 4em;
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 350px;
+	
 }
-label{
-	font-size:14px;
-	display:block;
-	width:100%;
-	position:relative;
-	left:-150px;
+#contenidos {
+    display: table-row;
 }
-#usuario{
-	width:100%;
-	position:relative;
-	left:-150px;
+#columna1, #columna2{
+    display: table-cell;
+    text-align:left;
+    padding: 10px;
 }
-#password{
-	width:100%;
-	position:relative;
-	left:-150px;
+
+label {
+	font-size: 14px;
+	display: block;
+	width: 100%;
+	position: relative;
+	left: -150px;
 }
-#boton{
-	position:absolute;
-	left:1px;
-	top:100px;
+
+#usuario {
+	width: 100%;
+	position: relative;
+	left: -150px;
 }
-input[type="submit"]{
-	width:100px;
-	height:30px;
-	margin-bottom:0;
-	background:black;
-	color:#fff;
+
+#password {
+	width: 100%;
+	position: relative;
+	left: -150px;
+}
+
+#boton {
+	position: absolute;
+	left: 1px;
+	top: 100px;
+}
+
+input[type="submit"] {
+	width: 100px;
+	height: 30px;
+	margin-bottom: 0;
+	background: black;
+	color: #fff;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	background: black;
+	cursor: pointer;
+}
+div#registro input.primero[type=submit]{
+	padding:1em;
+	font-size:15px;
+	background:#b9913e;
 	border:none;
+	color:white;
+	font-family:arial black;
+	border-radius:4px;
+	text-decoration:none;
+	float:left;
+	width:40%;
+	font-family: Comic Sans MS, Arial;
 }
-input[type="submit"]:hover{
-	background:black;
-	cursor:pointer;
+div#registro input.segundo[type=submit]{
+	padding:1em;
+	font-size:15px;
+	background:#b9913e;
+	border:none;
+	color:white;
+	font-family:arial black;
+	border-radius:4px;
+	text-decoration:none;
+	float:right;
+	width:40%;
+	font-family: Comic Sans MS, Arial;
+	
 }

@@ -39,6 +39,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Registrarcomensal</servlet-name>
 		<url-pattern>/registrarcomensal</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>Listacomensales</servlet-name>
+		<servlet-class>pw.Listacomensales</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Listacomensales</servlet-name>
+		<url-pattern>/listacomensales</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
